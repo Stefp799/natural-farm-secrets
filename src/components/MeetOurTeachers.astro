@@ -1,21 +1,125 @@
 ---
-// A section to showcase avatar teachers with embedded videos
+// MeetOurTeachers.astro - Clean 3-Card Layout with Tony's Link
 ---
 
-<section style="background: #ffffff; padding: 4rem 2rem; text-align: center;">
-  <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem;">
-    👨‍🏫 Meet Our Teachers
-  </h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-    <div>
-      <iframe width="360" height="215" src="https://www.youtube.com/embed/K2FYZfmWJ24" title="Peter King - Wood Chips & Earthworms" frameborder="0" allowfullscreen></iframe>
-      <p style="margin-top: 0.5rem; font-weight: bold;">Peter King</p>
-      <p style="font-size: 0.9rem; max-width: 300px; margin: auto;">Bringing the wisdom of wood chips and earthworms, in the style of Paul Gautschi.</p>
-    </div>
-    <div>
-      <iframe width="360" height="215" src="https://www.youtube.com/embed/o2KaRsW4jnk" title="Master Hun Lee - Fermentation & Microbiology" frameborder="0" allowfullscreen></iframe>
-      <p style="margin-top: 0.5rem; font-weight: bold;">Master Hun Lee</p>
-      <p style="font-size: 0.9rem; max-width: 300px; margin: auto;">Guiding you through Korean natural farming and microbial magic.</p>
+<section class="teachers-section">
+  <div class="container">
+    <div class="teachers-grid">
+      <!-- Teacher 1: Peter King -->
+      <div class="teacher-card">
+        <div class="video-container">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/NUaQlqCiq0E" title="Peter King - Wood Chips & Earthworms" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-content">
+          <p class="teacher-description">
+            Tony Busatta - Vermiculture Specialist. Italian farming tradition meets earthworm mastery for sustainable soil health.
+          </p>
+          <a href="/earthworms/tony-busatta/tony-cft" class="origin-link">Watch Tony's Origin Story →</a>
+        </div>
+      </div>
+
+      <!-- Teacher 2: Master Hun Lee -->
+      <div class="teacher-card">
+        <div class="video-container">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/NUaQlqCiq0E" title="Master Hun Lee - Fermentation & Microbiology" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-content">
+         <p class="teacher-description">
+            Tony Busatta - Vermiculture Specialist. Italian farming tradition meets earthworm mastery for sustainable soil health.
+          </p>
+          <a href="/earthworms/tony-busatta/tony-cft" class="origin-link">Watch Tony's Origin Story →</a>
+        </div>
+      </div>
+
+      <!-- Teacher 3: Tony Busatta -->
+      <div class="teacher-card">
+        <div class="video-container">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/NUaQlqCiq0E" title="Tony Busatta - Earthworm Wisdom" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-content">
+          <p class="teacher-description">
+            Tony Busatta - Vermiculture Specialist. Italian farming tradition meets earthworm mastery for sustainable soil health.
+          </p>
+          <a href="/earthworms/tony-busatta/origin-story" class="origin-link">Watch Tony's Origin Story →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+.teachers-section {
+  padding: 10px 40px 80px 40px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.teacher-card {
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.teacher-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000000;
+  margin: 0;
+}
+
+.origin-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #16008A;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.origin-link:hover {
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teachers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .teachers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+</style>

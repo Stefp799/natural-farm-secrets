@@ -1,0 +1,184 @@
+---
+// EASY EDIT SECTION - Just change these values for each new video
+const videoData = {
+  title: "Understanding CFT Systems: Continuous Flow Technology Explained",
+  subtitle: "Tony reveals the secret to revolutionary soil management systems",
+  youtube_url: "https://youtu.be/w9KFmlNmy1Y",
+  youtube_id: "w9KFmlNmy1Y", // Extract from URL for embed
+  episode: 2,
+  date: "July 29, 2025",
+  author: "Natural Farm Secrets Team",
+  category: "VERMICULTURE SPECIALIST",
+  video_description: "Tony Busatta shares his breakthrough discovery of Continuous Flow Technology (CFT) systems that revolutionize earthworm farming and soil health management."
+}
+
+// ARTICLE CONTENT - Copy and paste your full article here
+const articleContent = `
+For three generations, the Busatta family vineyard in Tuscany had been the pride of their small village. But by 2018, something was desperately wrong.
+
+The soil that had once produced award-winning grapes was depleted, lifeless. Chemical fertilizers had stopped working. The vines looked tired, and harvests were declining year after year.
+
+"I was losing hope," Tony recalls, standing among the rows that nearly broke his family's 150-year farming legacy. "My grandfather would have been heartbroken."
+
+But then Tony discovered something that would change everything: Continuous Flow Technology (CFT) systems. This revolutionary approach to earthworm farming doesn't just produce compost - it creates a living ecosystem that regenerates soil from the ground up.
+
+In this episode, Tony explains the science behind CFT systems and demonstrates why this "big words" technology is actually the simplest, most natural approach to soil regeneration. You'll learn how flowing water systems create the perfect environment for earthworms to work their magic, transforming organic waste into liquid gold for your soil.
+
+Watch as Tony, with his characteristic humility and decades of hands-on experience, breaks down this complex system into practical steps any farmer can implement. From the initial setup to maintenance and harvesting, Tony's gentle guidance makes even the most technical concepts accessible to everyone.
+
+This isn't just about earthworms - it's about understanding the fundamental principles that make soil truly alive. Tony's approach combines traditional Italian farming wisdom with cutting-edge agricultural science, creating results that speak for themselves in his thriving vineyard.
+`;
+
+// SIDEBAR EPISODE DATA
+const sidebarEpisodes = [
+  { number: 1, title: "The Origin Story", status: "available", current: false },
+  { number: 2, title: "CFT Systems Explained", status: "current", current: true },
+  { number: 3, title: "Soil Preparation", status: "coming", current: false }
+];
+
+// QUICK TIPS DATA
+const quickTips = [
+  "Tony's Tip: Start with just one square meter. Master the technique before scaling up.",
+  "Remember: Earthworms need consistent moisture but never waterlogged conditions.",
+  "Key insight: The flow rate determines the quality of your final compost."
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{videoData.title} | Natural Farm Secrets</title>
+  <meta name="description" content={videoData.video_description}>
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content={videoData.title}>
+  <meta property="og:description" content={videoData.video_description}>
+  <meta property="og:type" content="video.episode">
+  <meta property="og:url" content={`https://naturalfarmsecrets.com/videos/tony-cft-systems`}>
+  <meta property="og:image" content={`https://img.youtube.com/vi/${videoData.youtube_id}/maxresdefault.jpg`}>
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "{videoData.title}",
+      "description": "{videoData.video_description}",
+      "thumbnailUrl": "https://img.youtube.com/vi/{videoData.youtube_id}/maxresdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/{videoData.youtube_id}",
+      "uploadDate": "{videoData.date}",
+      "creator": {
+        "@type": "Person",
+        "name": "Tony Busatta"
+      }
+    }
+  </script>
+
+  <!-- Your existing CSS imports here -->
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+
+<body>
+  <!-- Header/Navigation (your existing header) -->
+  <header>
+    <!-- Your existing navigation -->
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs">
+    <a href="/">Home</a> > 
+    <a href="/earthworms">Earthworms</a> > 
+    <a href="/tony-busatta">Tony Busatta</a> > 
+    <span>CFT Systems</span>
+  </nav>
+
+  <main class="video-page">
+    <div class="content-container">
+      <!-- Main Content Area -->
+      <article class="main-content">
+        <!-- Category Badge -->
+        <div class="category-badge">{videoData.category}</div>
+        
+        <!-- Title Section -->
+        <h1 class="video-title">{videoData.title}</h1>
+        <p class="video-subtitle">{videoData.subtitle}</p>
+        
+        <!-- Meta Info -->
+        <div class="video-meta">
+          <span>By {videoData.author}</span>
+          <span>{videoData.date}</span>
+        </div>
+
+        <!-- YouTube Video Embed -->
+        <div class="video-container">
+          <iframe 
+            width="100%" 
+            height="400" 
+            src={`https://www.youtube.com/embed/${videoData.youtube_id}`}
+            title={videoData.title}
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+          <p class="video-caption">{videoData.video_description}</p>
+        </div>
+
+        <!-- Article Content -->
+        <div class="article-content">
+          {articleContent.split('\n\n').map(paragraph => 
+            paragraph.trim() && <p>{paragraph}</p>
+          )}
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Tony's Video Series -->
+        <div class="sidebar-section">
+          <h3>Tony's Video Series</h3>
+          <div class="episode-list">
+            {sidebarEpisodes.map(episode => (
+              <div class={`episode-item ${episode.current ? 'current' : ''}`}>
+                <div class="episode-number">{episode.number}</div>
+                <div class="episode-info">
+                  <h4>Episode {episode.number}: {episode.title}</h4>
+                  {episode.current && <span class="current-indicator">You are here</span>}
+                  {episode.status === 'coming' && <span class="coming-soon">Coming next</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Quick Tips -->
+        <div class="sidebar-section">
+          <h3>Quick Tips</h3>
+          <div class="tips-container">
+            {quickTips.map(tip => (
+              <div class="tip-item">
+                <p>{tip}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Explore More -->
+        <div class="sidebar-section">
+          <h3>Explore More</h3>
+          <ul class="explore-links">
+            <li><a href="/">← Back to Homepage</a></li>
+            <li><a href="/peter-king-wood-chips">Peter King's Wood Chips</a></li>
+            <li><a href="/master-hun-knf">Master Hun's KNF</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer (your existing footer) -->
+  <footer>
+    <!-- Your existing footer -->
+  </footer>
+</body>
+</html>
