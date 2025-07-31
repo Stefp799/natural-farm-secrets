@@ -1,0 +1,240 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Alura Visuals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        /* Header - Same as others */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #333;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 300;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        .about-hero {
+            padding: 80px 60px;
+            text-align: center;
+            background: #f8f6f4;
+        }
+
+        .about-title {
+            font-size: 48px;
+            font-weight: 100;
+            color: #333;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .about-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            background: #ffffff;
+        }
+
+        .about-section {
+            margin-bottom: 60px;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+            padding: 40px;
+            background: #f8f6f4;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .about-hero {
+                padding: 60px 30px;
+            }
+
+            .about-title {
+                font-size: 36px;
+            }
+
+            .about-content {
+                padding: 60px 30px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="logo">Alura Visuals</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="about-hero">
+            <h1 class="about-title">About Alura Visuals</h1>
+            <p class="about-subtitle">Crafting visual stories that connect with your audience and drive results</p>
+        </section>
+
+        <section class="about-content">
+            <div class="about-section">
+                <h2>Our Story</h2>
+                <p>Founded in 2019, Alura Visuals emerged from a passion for creating stunning visual content that doesn't just look beautiful—it performs. We specialize in high-end jewelry photography and video content that elevates brands and drives sales.</p>
+                <p>Our approach combines artistic vision with marketing strategy, ensuring every image and video we create serves a purpose in your brand's story and business goals.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Retention</div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Approach</h2>
+                <p>We believe that great visual content is more than just pretty pictures. Every piece we create is designed with your brand's objectives in mind, whether that's increasing online sales, building brand awareness, or showcasing craftsmanship.</p>
+                <p>Our team combines technical expertise with creative vision, using the latest photography and video techniques to capture your jewelry in its best light—literally and figuratively.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Why Choose Us</h2>
+                <p>Unlike generic photography studios, we specialize exclusively in jewelry and luxury goods. This focus allows us to understand the unique challenges of showcasing precious metals, gemstones, and intricate craftsmanship.</p>
+                <p>We're not just photographers—we're visual strategists who understand how to create content that converts browsers into buyers.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

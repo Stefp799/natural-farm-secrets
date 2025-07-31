@@ -1,0 +1,209 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Alura Visuals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        /* Header - Same as index */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #333;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 300;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 120px;
+            min-height: 100vh;
+            background: #f8f6f4;
+        }
+
+        .services-hero {
+            padding: 80px 60px;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .services-title {
+            font-size: 48px;
+            font-weight: 100;
+            color: #333;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .services-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 60px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .service-price {
+            font-size: 18px;
+            color: #333;
+            font-weight: 400;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .services-hero {
+                padding: 60px 30px;
+            }
+
+            .services-title {
+                font-size: 36px;
+            }
+
+            .services-grid {
+                padding: 60px 30px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="logo">Alura Visuals</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="services-hero">
+            <h1 class="services-title">Our Services</h1>
+            <p class="services-subtitle">Professional jewelry photography and visual content that elevates your brand and drives sales</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <h3>Product Photography</h3>
+                <p>High-end jewelry photography with professional lighting and styling. Perfect for e-commerce, catalogs, and marketing materials. Includes multiple angles and detail shots.</p>
+                <div class="service-price">Starting at $299/session</div>
+            </div>
+
+            <div class="service-card">
+                <h3>Video Content</h3>
+                <p>Cinematic jewelry videos that showcase movement, sparkle, and craftsmanship. Ideal for social media, websites, and advertising campaigns.</p>
+                <div class="service-price">Starting at $499/video</div>
+            </div>
+
+            <div class="service-card">
+                <h3>Brand Visuals</h3>
+                <p>Complete visual identity including lifestyle photography, model shoots, and brand storytelling content. Full creative direction included.</p>
+                <div class="service-price">Starting at $899/package</div>
+            </div>
+
+            <div class="service-card">
+                <h3>Social Media Content</h3>
+                <p>Monthly content packages with photography and video optimized for Instagram, TikTok, and Facebook. Consistent posting schedule and engagement optimization.</p>
+                <div class="service-price">Starting at $399/month</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
